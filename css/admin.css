@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    background-color: #000066;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked+.menu__btn>span {
+    transform: rotate(45deg);
+    background-color: black;
+}
+
+#menu__toggle:checked+.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0deg);
+    background-color: black;
+}
+
+#menu__toggle:checked+.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: black;
+}
+
+#menu__toggle:checked~.menu__box {
+    left: 0 !important;
+}
+
+.menu__btn {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition-duration: .25s;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    z-index: 2;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+}
+
+.menu__box h2 {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+.menu__item:hover {
+    background-color: #CFD8DC;
+    text-decoration: underline;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo h1 {
+    color: white;
+    margin: 20px 5px;
+    font-family: 'Lucida Handwriting', cursive;
+}
+
+.login {
+    margin: 10px 10px;
+}
+
+.logbtn {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.logbtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.logbtn span a {
+    text-decoration: none;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logbtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.logbtn:hover span {
+    padding-right: 20px;
+}
+
+.logbtn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.list h2 {
+    text-align: center;
+    margin: 30px;
+    font-size: 40px;
+    color: #000066;
+}
+
+.list h3 {
+    text-align: center;
+    margin: 10px;
+    font-size: 25px;
+    color: #000066;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+table,
+th,
+td {
+    border: 2px solid #dddd;
+    border-collapse: collapse;
+    padding: 10px;
+    font-size: 20px;
+}
+
+th {
+    background-color: #000066e0;
+    color: white;
+    padding: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.accept {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+}
+
+.accept img {
+    width: 30px;
+    height: 30px;
+}
+
+.reject {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+}
+
+.reject img {
+    width: 30px;
+    height: 30px;
+}

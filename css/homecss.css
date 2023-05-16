@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+  background-color: #000066;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo h1 {
+  color: white;
+  margin: 20px 5px;
+  font-family: 'Lucida Handwriting', cursive;
+}
+
+.sections {
+  display: flex;
+  width: 450px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sections a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.sections a:hover {
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+.login {
+  margin: 10px 10px;
+}
+
+.logbtn {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 25px;
+  padding: 15px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.logbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.logbtn span a {
+  text-decoration: none;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logbtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.logbtn:hover span {
+  padding-right: 25px;
+}
+
+.logbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.about-us {
+  background-color: #f1ededdc;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.about-us h2 {
+  background-color: #000066;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+
+}
+
+.about-us p {
+  margin: 10px;
+  padding: 10px 120px;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.btn {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.head {
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.head h3 {
+  background-color: #000066;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.admission-form form {
+  background-color: #f1ededdc;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sname,
+.gname,
+.contact,
+.address,
+.cclass,
+.shift,
+.dob,
+.gender {
+  width: 50%;
+  padding: 20px;
+}
+
+.sname,
+.gname,
+.contact,
+.address,
+.cclass,
+.shift,
+.dob,
+.gender label {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#sname,
+#gname,
+#contact,
+#address,
+#class,
+#shift,
+#dob {
+  width: 90%;
+  height: 50px;
+  padding: 15px;
+  border-radius: 7px;
+  border: 2px solid rgba(0, 0, 0, 0.438);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+
+}
+
+#gender {
+  margin: 10px;
+  border: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+.gender span {
+  font-size: 20px;
+}
+
+.sub-btn {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  margin: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  justify-content: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.sub-btn:hover {
+  font-size: 33px;
+}
+
+.sub-btn:hover:after {
+  opacity: 1;
+  right: 0;
+}
+
+.footer {
+  background-color: #000066;
+  height: 30px;
+  margin-top: 30px;
+  color: white;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 20px;
+
+}
